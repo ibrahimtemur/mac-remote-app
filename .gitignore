@@ -1,0 +1,111 @@
+# ==========================================
+# macOS System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# Python & macOS Application (mac-app)
+# ==========================================
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+**/venv/
+mac-app/venv/
+mac-app/build/
+mac-app/dist/
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.pytest_cache/
+*.dSYM/
+*.app/
+*.dmg
+
+# ==========================================
+# Android & Gradle (android-app)
+# ==========================================
+.gradle/
+**/build/
+android-app/.gradle/
+android-app/build/
+android-app/app/build/
+android-app/local.properties
+local.properties
+**/jdk-*/
+android-app/jdk-*/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ==========================================
+# Signing Keys, Keystores & Security
+# ==========================================
+SIGNING_GUIDE.md
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.mobileprovision
+*.p8
+*.env
+.env.*
+secrets.*
+ssh_key/
+ipadress.txt
+infra/.env
+.ngrok2/
+ngrok.yml
+
+# ==========================================
+# IDEs & Editor Configuration
+# ==========================================
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# OS / Temporary Files
+# ==========================================
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+ios-app/.build/
+ios-app/build/
+ios-app/.swiftpm/
+scripts/auto_notarize_and_shutdown.sh
+build-artifacts/
+
+*.xcuserstate

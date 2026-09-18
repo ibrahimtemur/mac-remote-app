@@ -1,0 +1,99 @@
+name: CI Build & Validation
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-mac:
+    name: Build & Validate macOS App
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: "mac-app/requirements.txt"
+
+      - name: Install macOS Dependencies
+        working-directory: mac-app
+        run: |
+          python3 -m pip install --upgrade pip setuptools wheel py2app
+          pip install -r requirements.txt
+
+      - name: Syntax & Lint Validation
+        working-directory: mac-app
+        run: |
+          python3 -m py_compile gui.py server.py input_controller.py discovery.py setup.py
+
+      - name: Test Build macOS App (py2app)
+        working-directory: mac-app
+        run: |
+          python3 setup.py py2app --alias
+
+      - name: Package macOS Distribution (DMG & PKG)
+        run: |
+          chmod +x scripts/package_mac.sh
+          ./scripts/package_mac.sh
+          ./scripts/package_mac.sh --appstore
+
+      - name: Upload macOS Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: MacRemote-macOS-Packages
+          path: build-artifacts/*
+          retention-days: 7
+
+  build-android:
+    name: Build & Validate Android App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+          cache: "gradle"
+
+      - name: Make Gradlew Executable
+        working-directory: android-app
+        run: chmod +x gradlew
+
+      - name: Build Android Debug APK
+        working-directory: android-app
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload Debug APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MacRemote-Debug-APK
+          path: android-app/app/build/outputs/apk/debug/*.apk
+          retention-days: 7
+
+  build-ios:
+    name: Build & Validate iOS App (Swift Package)
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app
+
+      - name: Build iOS Swift Library for Simulator
+        working-directory: ios-app
+        run: |
+          swift build --triple arm64-apple-ios16.0-simulator --sdk $(xcrun --sdk iphonesimulator --show-sdk-path)
