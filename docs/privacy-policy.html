@@ -9,51 +9,90 @@
             --bg-color: #0d1117;
             --card-bg: #161b22;
             --text-color: #c9d1d9;
+            --text-muted: #8b949e;
             --heading-color: #58a6ff;
             --border-color: #30363d;
             --accent: #238636;
+            --code-bg: #1f242c;
+        }
+        * {
+            box-sizing: border-box;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.65;
             margin: 0;
-            padding: 20px;
+            padding: 24px 16px;
         }
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 32px;
+            padding: 36px 32px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1, h2, h3 {
-            color: var(--heading-color);
-        }
-        h1 {
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
+        }
+        .title-area h1 {
+            margin: 0 0 8px 0;
+            font-size: 26px;
+            color: #ffffff;
+        }
+        .effective-date {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(35, 134, 54, 0.2);
+            color: #3fb950;
+            border: 1px solid rgba(56, 139, 253, 0.2);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
         }
         .lang-switch {
             display: flex;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 8px;
         }
         .lang-btn {
             background: #21262d;
-            color: #58a6ff;
+            color: #c9d1d9;
             border: 1px solid var(--border-color);
             padding: 8px 16px;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .lang-btn:hover {
+            border-color: #58a6ff;
+            color: #58a6ff;
         }
         .lang-btn.active {
             background: #1f6feb;
-            color: #fff;
+            color: #ffffff;
             border-color: #388bfd;
         }
         .lang-section {
@@ -62,122 +101,200 @@
         .lang-section.active {
             display: block;
         }
+        h2 {
+            color: var(--heading-color);
+            font-size: 19px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            border-left: 3px solid #58a6ff;
+            padding-left: 10px;
+        }
+        p {
+            margin: 0 0 14px 0;
+        }
         ul {
-            padding-left: 20px;
+            margin: 0 0 16px 0;
+            padding-left: 24px;
         }
         li {
             margin-bottom: 8px;
         }
-        .badge {
-            display: inline-block;
-            background: #238636;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
+        code {
+            background: var(--code-bg);
+            color: #79c0ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace;
+        }
+        .callout {
+            background: rgba(56, 139, 253, 0.08);
+            border: 1px solid rgba(56, 139, 253, 0.25);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 18px 0;
+            font-size: 14px;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="lang-switch">
-        <button class="lang-btn active" onclick="switchLang('en')">🇬🇧 English</button>
-        <button class="lang-btn" onclick="switchLang('tr')">🇹🇷 Türkçe</button>
+    <div class="header">
+        <div class="title-area">
+            <h1 id="main-title">Mac Remote Privacy Policy</h1>
+            <p class="effective-date" id="date-label">Effective Date: September 18, 2026</p>
+            <div class="badges">
+                <span class="badge">Local-First</span>
+                <span class="badge">Zero Analytics</span>
+                <span class="badge">No Third-Party Ads</span>
+                <span class="badge">Encrypted Tunneling</span>
+            </div>
+        </div>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLang('en')">English</button>
+            <button class="lang-btn" onclick="setLang('tr')">Türkçe</button>
+        </div>
     </div>
 
     <!-- English Version -->
     <div id="lang-en" class="lang-section active">
-        <h1>Privacy Policy for Mac Remote</h1>
-        <p><strong>Effective Date:</strong> September 11, 2026</p>
-        <p><span class="badge">No Tracking</span> <span class="badge">No Data Collection</span> <span class="badge">Local First</span></p>
+        <p>This Privacy Policy explains how <strong>Mac Remote</strong> ("the Application", developed by Ibrahim Temur) handles information across all supported platforms, including the <strong>iOS / iPadOS client</strong>, <strong>Android client</strong>, and the <strong>macOS companion server</strong> software.</p>
 
-        <p>This Privacy Policy applies to the <strong>Mac Remote</strong> mobile application (iOS and Android clients) and the accompanying macOS server software developed by Ibrahim Temur. We respect your privacy and are committed to protecting it through complete transparency.</p>
+        <p>Our guiding principle is simple: <strong>Your data is yours. We do not collect, store, sell, or monetize your personal information.</strong></p>
 
         <h2>1. Information We Do NOT Collect</h2>
-        <p>Mac Remote does <strong>NOT</strong> collect, store, transmit to external servers, or sell any personal data. Specifically:</p>
+        <p>Mac Remote is built with a privacy-by-design architecture. We explicitly do not collect:</p>
         <ul>
-            <li>No user accounts, email addresses, passwords, or personal profiles.</li>
-            <li>No analytics or usage telemetry (we do not use Firebase Analytics, Google Analytics, Mixpanel, etc.).</li>
-            <li>No advertising SDKs or third-party trackers.</li>
-            <li>No persistent location or GPS data.</li>
+            <li><strong>No User Accounts or Identity:</strong> You do not need to register, provide an email address, name, or phone number to use any feature.</li>
+            <li><strong>No Tracking or Analytics:</strong> We do not integrate tracking SDKs (such as Firebase Analytics, Google Analytics, Mixpanel, AppsFlyer, etc.). We have zero knowledge of how or when you use the app.</li>
+            <li><strong>No Advertising:</strong> The app contains no third-party ad networks, advertising identifiers (IDFA / GAID), or commercial tracking scripts.</li>
+            <li><strong>No Cloud Data Storage:</strong> No personal logs, keystrokes, clipboard contents, or screen frames are stored on our servers.</li>
         </ul>
 
-        <h2>2. Data Handled in Real-Time During Remote Control</h2>
-        <p>To enable the hardware-level trackpad, keyboard, and screen mirroring features, the app processes data in real-time between your mobile device and your Mac:</p>
+        <h2>2. Data Handled in Real-Time During Operation</h2>
+        <p>To provide real-time mouse, keyboard, and screen control, the Application processes the following transient data exclusively between your mobile device and your Mac:</p>
         <ul>
-            <li><strong>Display Frames:</strong> Live screen captures are streamed from your Mac to your mobile device to provide visual feedback. These frames are decoded and displayed in transient RAM and are <em>never saved, recorded, or uploaded</em> to any server.</li>
-            <li><strong>Input Commands:</strong> Touch coordinates, mouse clicks, scrolls, keyboard keystrokes, and media control actions are transmitted directly to your Mac to control the cursor and system.</li>
-            <li><strong>Authentication PIN:</strong> A 4-digit random PIN generated by your Mac is verified upon pairing to ensure only authorized devices can connect.</li>
+            <li><strong>Screen Mirroring Streams:</strong> Live desktop screen frames are captured by the macOS server and streamed directly to your mobile device's transient memory (RAM) for display. Frames are rendered in real time and are <em>never recorded, uploaded, or saved</em> to disk or remote servers.</li>
+            <li><strong>Input Actions:</strong> Trackpad finger movements, taps, clicks, scroll vectors, keyboard keystrokes, and media/volume triggers are transmitted directly to your Mac and injected into the local macOS accessibility/HID subsystem.</li>
+            <li><strong>Cryptographic Authentication:</strong> Pairing is authenticated using a dynamically generated 6-digit security PIN and HMAC challenge-response verification to ensure only authorized devices can issue commands to your Mac.</li>
         </ul>
 
-        <h2>3. Network Communication & Tunneling</h2>
-        <p>Mac Remote operates over your <strong>Local Wi-Fi Network</strong> (LAN) by default. If you choose to enable remote internet access via the WAN tunnel feature, communication travels through an isolated, authenticated reverse tunnel directly between your device and your Mac. No user data, keystrokes, or screen frames are stored on relay servers.</p>
-
-        <h2>4. Device Permissions</h2>
-        <p>The Android application requests only the minimal standard permissions:</p>
+        <h2>3. Device Permissions & Purpose</h2>
+        <p>The Application requests only the minimal permissions required to deliver its remote control features:</p>
         <ul>
-            <li><code>android.permission.INTERNET</code>: Required to establish the WebSocket connection to your Mac.</li>
-            <li><code>android.permission.ACCESS_NETWORK_STATE</code> & <code>ACCESS_WIFI_STATE</code>: Required to detect local network status and discover your Mac using mDNS.</li>
+            <li><strong>Camera (iOS <code>NSCameraUsageDescription</code> & Android <code>android.permission.CAMERA</code>):</strong> Used strictly to scan the dynamic connection QR code displayed on your Mac screen. The camera stream is analyzed on-device in real time by the OS barcode reader; no photos or video recordings are ever captured, saved, or uploaded.</li>
+            <li><strong>Local Network (iOS <code>NSLocalNetworkUsageDescription</code> & Android Network State):</strong> Required to discover your Mac automatically on the local Wi-Fi network using Bonjour (mDNS) and establish a direct, low-latency WebSocket connection.</li>
+            <li><strong>Internet Access:</strong> Used to establish local WebSocket connections and optional encrypted reverse WAN tunnel connections when accessing your Mac remotely outside your local network.</li>
         </ul>
-        <p><em>Note: The Android client does NOT request Accessibility permissions, camera permissions, or file storage permissions.</em></p>
 
-        <h2>5. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+        <div class="callout">
+            <strong>What we never request:</strong> The mobile app never requests access to your Photos library, Contacts, Microphone, Location/GPS, or external device storage.
+        </div>
 
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions or concerns about this Privacy Policy, please contact us via email at: <strong>ibrahimtemur.dev@gmail.com</strong> or through the project GitHub repository at <a href="https://github.com/ibrahimtemur/mac-remote-app" style="color: #58a6ff;">github.com/ibrahimtemur/mac-remote-app</a>.</p>
+        <h2>4. Network Security & WAN Tunneling</h2>
+        <p>By default, Mac Remote operates strictly within your local Wi-Fi network (LAN), where data packets never leave your physical router. When you choose to use the optional WAN remote access feature, traffic passes through an authenticated, encrypted end-to-end tunnel. Relay infrastructure only handles packet forwarding; it does not decrypt, inspect, or retain your data.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Mac Remote does not collect any personal data from anyone, including children under the age of 13. The application is completely safe for all audiences and complies with COPPA and global privacy regulations.</p>
+
+        <h2>6. Contact & Open Source Inquiries</h2>
+        <p>If you have any questions, feedback, or verification requests regarding this Privacy Policy, please contact us:</p>
+        <ul>
+            <li><strong>Developer Email:</strong> <a href="mailto:temuribrahim70@gmail.com">temuribrahim70@gmail.com</a></li>
+            <li><strong>Project Showcase & Documentation:</strong> <a href="https://github.com/ibrahimtemur/mac-remote-app" target="_blank" rel="noopener noreferrer">github.com/ibrahimtemur/mac-remote-app</a></li>
+        </ul>
     </div>
 
     <!-- Turkish Version -->
     <div id="lang-tr" class="lang-section">
-        <h1>Mac Remote Gizlilik Politikası</h1>
-        <p><strong>Yürürlük Tarihi:</strong> 11 Eylül 2026</p>
-        <p><span class="badge">Takip Yok</span> <span class="badge">Veri Toplama Yok</span> <span class="badge">Yerel Öncelikli</span></p>
+        <p>Bu Gizlilik Politikası, İbrahim Temur tarafından geliştirilen <strong>Mac Remote</strong> uygulamasının (<strong>iOS / iPadOS istemcisi</strong>, <strong>Android istemcisi</strong> ve <strong>macOS yardımcı sunucu yazılımı</strong> dahil olmak üzere) verileri nasıl işlediğini açıklar.</p>
 
-        <p>Bu Gizlilik Politikası, İbrahim Temur tarafından geliştirilen <strong>Mac Remote</strong> mobil uygulaması (Android istemci) ve eşlik eden macOS sunucu yazılımı için geçerlidir. Gizliliğinize saygı duyuyor ve tam şeffaflık ilkesiyle hareket ediyoruz.</p>
+        <p>Temel ilkemiz son derece nettir: <strong>Verileriniz yalnızca size aittir. Kişisel verilerinizi asla toplamıyor, depolamıyor, satmıyor ve ticarileştirmiyoruz.</strong></p>
 
         <h2>1. Toplanmayan Veriler</h2>
-        <p>Mac Remote hiçbir kişisel veriyi <strong>toplamaz, depolamaz, harici sunuculara göndermez ve üçüncü taraflarla paylaşmaz</strong>:</p>
+        <p>Mac Remote, "tasarımdan itibaren gizlilik" (privacy-by-design) ilkesiyle geliştirilmiştir. Aşağıdaki verilerin hiçbiri toplanmaz:</p>
         <ul>
-            <li>Kullanıcı hesabı, ad, soyad, e-posta veya parola toplanmaz.</li>
-            <li>Kullanım analitiği veya telemetri araçları (Firebase, Google Analytics vb.) kullanılmaz.</li>
-            <li>Reklam kütüphaneleri veya üçüncü taraf izleyiciler bulunmaz.</li>
-            <li>Konum veya GPS verisi işlenmez.</li>
+            <li><strong>Kullanıcı Hesabı veya Kimlik Bilgisi Yok:</strong> Uygulamayı kullanmak için üye olmanız, e-posta, ad veya telefon numarası paylaşmanız gerekmez.</li>
+            <li><strong>Analitik ve Takip Yok:</strong> Hiçbir telemetri veya analitik aracı (Firebase Analytics, Google Analytics, Mixpanel vb.) kullanılmaz. Uygulamayı ne zaman veya nasıl kullandığınızı takip etmeyiz.</li>
+            <li><strong>Reklam Yok:</strong> Uygulamada üçüncü taraf reklam ağları, reklam kimlikleri (IDFA / GAID) veya pazarlama izleyicileri yer almaz.</li>
+            <li><strong>Bulut Veri Saklama Yok:</strong> Kişisel kayıtlar, tuş vuruşları, pano içeriği veya ekran kareleri sunucularda saklanmaz.</li>
         </ul>
 
-        <h2>2. Uzaktan Yönetim Sırasında Gerçek Zamanlı İşlenen Veriler</h2>
-        <p>Uygulamanın trackpad, klavye ve ekran yansıtma işlevlerini yerine getirebilmesi için yalnızca cihazınız ile Mac'iniz arasında anlık veri akışı sağlanır:</p>
+        <h2>2. Kullanım Sırasında Anlık İşlenen Veriler</h2>
+        <p>Fare, klavye ve ekran kontrolünü gerçek zamanlı gerçekleştirebilmek amacıyla veriler yalnızca mobil cihazınız ile Mac'iniz arasında anlık olarak akar:</p>
         <ul>
-            <li><strong>Ekran Görüntüsü:</strong> Mac ekranınız mobil cihazınıza anlık görsel kontrol için iletilir. Bu kareler yalnızca cihazın belleğinde (RAM) işlenir; <em>kesinlikle kaydedilmez, depolanmaz veya harici sunuculara aktarılmaz</em>.</li>
-            <li><strong>Girdi Komutları:</strong> Dokunma hareketleri, tıklama, kaydırma, klavye tuşları ve medya kontrolleri doğrudan Mac'inize iletilerek işletim sisteminde yürütülür.</li>
-            <li><strong>Doğrulama PIN'i:</strong> Mac uygulamasının ürettiği 4 haneli rastgele PIN, yalnızca eşleşmeyi doğrulamak amacıyla kullanılır.</li>
+            <li><strong>Ekran Yansıtma Akışı:</strong> Mac ekranınız anlık olarak taranır ve görsel geri bildirim için doğrudan mobil cihazınızın geçici belleğine (RAM) aktarılır. Bu görüntüler kesinlikle <em>kaydedilmez, depolanmaz ve harici sunuculara aktarılmaz</em>.</li>
+            <li><strong>Girdi Komutları:</strong> Trackpad dokunmaları, tıklamalar, kaydırmalar, klavye tuşları ve medya kontrolleri doğrudan Mac'inize iletilerek işletim sistemi düzeyinde yürütülür.</li>
+            <li><strong>Kriptografik Doğrulama:</strong> Eşleşme, Mac tarafından dinamik üretilen 6 haneli güvenlik PIN'i ve HMAC doğrulaması ile korunur; yalnızca yetkilendirilmiş cihazların bağlanmasına izin verilir.</li>
         </ul>
 
-        <h2>3. Ağ İletişimi ve Güvenlik</h2>
-        <p>Mac Remote varsayılan olarak <strong>Yerel Wi-Fi Ağınız</strong> üzerinden çalışır. İnternet üzerinden uzaktan erişim amacıyla WAN tüneli kullanıldığında veriler güvenli bir ters tünel üzerinden doğrudan Mac'inize akar; aracı sunucularda hiçbir tuş, ekran karesi veya kişisel veri depolanmaz.</p>
-
-        <h2>4. Cihaz İzinleri</h2>
-        <p>iOS ve Android mobil istemci uygulamaları yalnızca temel ağ izinlerini talep eder:</p>
+        <h2>3. Cihaz İzinleri ve Kullanım Amaçları</h2>
+        <p>Uygulama yalnızca işlevini yerine getirebilmek için zorunlu olan asgari izinleri talep eder:</p>
         <ul>
-            <li><code>android.permission.INTERNET</code>: Mac sunucusuyla WebSocket bağlantısı kurmak için.</li>
-            <li><code>android.permission.ACCESS_NETWORK_STATE</code> & <code>ACCESS_WIFI_STATE</code>: Yerel ağ durumunu kontrol etmek ve Mac'i ağ üzerinde otomatik bulmak için.</li>
+            <li><strong>Kamera İzni (iOS <code>NSCameraUsageDescription</code> ve Android Kamera İzni):</strong> Yalnızca Mac ekranınızda beliren dinamik bağlantı QR kodunu taramak amacıyla kullanılır. Kamera görüntüsü işletim sisteminin yerel barkod okuyucusu tarafından doğrudan cihaz üzerinde anlık işlenir; hiçbir fotoğraf veya video kaydı alınmaz ve iletilmez.</li>
+            <li><strong>Yerel Ağ İzni (iOS <code>NSLocalNetworkUsageDescription</code> ve Android Ağ Durumu):</strong> Mac bilgisayarınızı yerel Wi-Fi ağında Bonjour (mDNS) ile otomatik bulmak ve doğrudan düşük gecikmeli WebSocket bağlantısı kurmak için gereklidir.</li>
+            <li><strong>İnternet İzni:</strong> Yerel ağ bağlantısı ve isteğe bağlı olarak sunulan güvenli WAN tüneli üzerinden uzaktan erişim sağlamak için kullanılır.</li>
         </ul>
-        <p><em>Not: Android uygulamasında Erişilebilirlik (Accessibility) izni, kamera izni veya dosya depolama izni bulunmamaktadır.</em></p>
 
-        <h2>5. İletişim</h2>
-        <p>Gizlilik Politikası ile ilgili her türlü soru veya geri bildiriminiz için <strong>ibrahimtemur.dev@gmail.com</strong> e-posta adresinden veya <a href="https://github.com/ibrahimtemur/mac-remote-app" style="color: #58a6ff;">github.com/ibrahimtemur/mac-remote-app</a> GitHub deposu üzerinden bizimle iletişime geçebilirsiniz.</p>
+        <div class="callout">
+            <strong>Asla talep edilmeyen izinler:</strong> Fotoğraf Galerisi, Rehber/Kişiler, Mikrofon, Konum/GPS ve harici dosya depolama izinleri hiçbir şekilde talep edilmez.
+        </div>
+
+        <h2>4. Ağ Güvenliği ve WAN Tünelleme</h2>
+        <p>Mac Remote varsayılan olarak yerel Wi-Fi ağınız (LAN) içerisinde çalışır; veriler yönlendiricinizden dışarı çıkmaz. Dışarıdayken uzaktan erişim için güvenli WAN tünelini kullandığınızda trafik şifreli uçtan uca tünel üzerinden iletilir. Aracı altyapı yalnızca paket iletimi sağlar, verinizi göremez, kaydedemez veya saklayamaz.</p>
+
+        <h2>5. Çocukların Gizliliği</h2>
+        <p>Mac Remote, 13 yaş altındaki çocuklar dahil olmak üzere hiçbir kimseden kişisel veri toplamaz. Uygulama tüm yaş grupları için tamamen güvenlidir.</p>
+
+        <h2>6. İletişim</h2>
+        <p>Gizlilik Politikası ile ilgili her türlü soru, geri bildirim veya görüşleriniz için bizimle iletişime geçebilirsiniz:</p>
+        <ul>
+            <li><strong>Geliştirici E-Posta:</strong> <a href="mailto:temuribrahim70@gmail.com">temuribrahim70@gmail.com</a></li>
+            <li><strong>Proje ve Dokümantasyon:</strong> <a href="https://github.com/ibrahimtemur/mac-remote-app" target="_blank" rel="noopener noreferrer">github.com/ibrahimtemur/mac-remote-app</a></li>
+        </ul>
     </div>
+
+    <footer>
+        &copy; 2026 Mac Remote &bull; Developed by Ibrahim Temur &bull; All rights reserved.
+    </footer>
 </div>
 
 <script>
-    function switchLang(lang) {
+    function setLang(lang) {
         document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
         document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-        
-        document.getElementById('lang-' + lang).classList.add('active');
-        event.target.classList.add('active');
+
+        const targetSection = document.getElementById('lang-' + lang);
+        if (targetSection) {
+            targetSection.classList.add('active');
+        }
+
+        const buttons = document.querySelectorAll('.lang-btn');
+        if (lang === 'en') {
+            buttons[0].classList.add('active');
+            document.getElementById('main-title').innerText = 'Mac Remote Privacy Policy';
+            document.getElementById('date-label').innerText = 'Effective Date: September 18, 2026';
+        } else {
+            buttons[1].classList.add('active');
+            document.getElementById('main-title').innerText = 'Mac Remote Gizlilik Politikası';
+            document.getElementById('date-label').innerText = 'Yürürlük Tarihi: 18 Eylül 2026';
+        }
     }
 </script>
 
