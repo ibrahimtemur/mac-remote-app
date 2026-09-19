@@ -5,8 +5,9 @@
 ### Ultra-Low Latency Wireless Trackpad, Keyboard & Live Screen Streamer for macOS from iOS (iPhone & iPad) & Android
 
 <p align="center">
-  <a href="README.md"><b>🇬🇧 English</b></a> •
-  <a href="README.tr.md"><b>🇹🇷 Türkçe</b></a>
+  <a href="README.md"><img src="https://flagcdn.com/w40/gb.png" width="20" alt="English"/>&nbsp;<b>English</b></a>
+  &nbsp;•&nbsp;
+  <a href="README.tr.md"><img src="https://flagcdn.com/w40/tr.png" width="20" alt="Türkçe"/>&nbsp;<b>Türkçe</b></a>
 </p>
 
 [![GitHub Release](https://img.shields.io/github/v/release/ibrahimtemur/mac-remote-app?style=for-the-badge&color=blue)](https://github.com/ibrahimtemur/mac-remote-app/releases)
@@ -18,7 +19,7 @@
 
 Turn your **iPhone, iPad, or Android device** into a high-precision, hardware-level remote trackpad, media controller, keyboard, and crystal-clear display mirror for macOS — over both Local Wi-Fi (LAN) and Internet (WAN).
 
-[Features](#-key-features) • [How It Works](#-how-it-works) • [Installation](#-installation) • [Security](#-security) • [Wiki](https://github.com/ibrahimtemur/mac-remote-app/wiki)
+[Features](#-key-features) • [How It Works](#-architecture--how-it-works) • [Installation](#-installation) • [Security](#-security-architecture) • [Wiki](https://github.com/ibrahimtemur/mac-remote-app/wiki)
 
 </div>
 
@@ -27,7 +28,7 @@ Turn your **iPhone, iPad, or Android device** into a high-precision, hardware-le
 ## 📸 Screenshots
 
 <div align="center">
-  <h3>🇬🇧 English Interface</h3>
+  <h3><img src="https://flagcdn.com/w40/gb.png" width="24" alt="English"/>&nbsp;English Interface</h3>
   <table>
     <tr>
       <td align="center"><b>1. Mobile Discovery & Pairing</b></td>
@@ -41,7 +42,7 @@ Turn your **iPhone, iPad, or Android device** into a high-precision, hardware-le
     </tr>
   </table>
 
-  <h3>🇹🇷 Türkçe Arayüz</h3>
+  <h3><img src="https://flagcdn.com/w40/tr.png" width="24" alt="Türkçe"/>&nbsp;Türkçe Arayüz</h3>
   <table>
     <tr>
       <td align="center"><b>1. Cihaz Keşfi & Bağlantı</b></td>
@@ -75,7 +76,7 @@ Turn your **iPhone, iPad, or Android device** into a high-precision, hardware-le
   - 10-second fast-forward and 10-second rewind for media and video players.
   - Native system volume buttons (Volume Up, Volume Down, Mute).
 - ⌨️ **Expandable Virtual Keyboard:**
-  - Integrated soft keyboard with quick helper buttons: `␣ Space`, `⌫ Backspace`, `⏎ Enter`, and `Esc`.
+  - Integrated soft keyboard with quick helper buttons: `Space`, `Backspace`, `Enter`, and `Esc`.
   - Glitch-free, single-stroke text delivery (no double-character bugs).
 - 🌐 **Zero-Config Networking & Remote Access:**
   - **Local Network (LAN):** Automatic server discovery via Bonjour / mDNS (`_macremote._tcp.local.`) on iOS (Network.framework `NWBrowser`) & Android (`NsdManager`).
