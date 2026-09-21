@@ -27,7 +27,7 @@
 ## 📸 Ekran Görüntüleri
 
 <div align="center">
-  <h3><img src="https://flagcdn.com/w24/gb.png" width="24" alt="GB"> İngilizce Arayüz</h3>
+  <h3><img src="https://flagcdn.com/w40/gb.png" width="24" alt="EN"> İngilizce Arayüz</h3>
   <table>
     <tr>
       <td align="center"><b>1. Mobil Keşif & Bağlantı</b></td>
@@ -41,7 +41,7 @@
     </tr>
   </table>
 
-  <h3><img src="https://flagcdn.com/w24/tr.png" width="24" alt="TR"> Türkçe Arayüz</h3>
+  <h3><img src="https://flagcdn.com/w40/tr.png" width="24" alt="TR"> Türkçe Arayüz</h3>
   <table>
     <tr>
       <td align="center"><b>1. Cihaz Keşfi & Bağlantı</b></td>
@@ -123,7 +123,7 @@
 ## 📥 Kurulum
 
 ### 🍏 macOS (Sunucu)
-1. [**MacRemote.dmg dosyasını indirin (son sürüm)**](https://github.com/ibrahimtemur/mac-remote-app/releases/latest/download/MacRemote.dmg)
+1. [Sürümler (Releases)](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasına gidin ve `MacRemote-v1.5.0.dmg` dosyasını indirin.
 2. DMG dosyasını açın ve **Mac Remote.app** uygulamasını `/Applications` (Uygulamalar) klasörünüze sürükleyin.
 3. **Erişilebilirlik ve Ekran Kaydı İzinleri:**
    - **Sistem Ayarları** > **Gizlilik ve Güvenlik** > **Erişilebilirlik** bölümünden Mac Remote'a izin verin.
@@ -136,10 +136,8 @@
 3. Otomatik bulunan Mac'inizi seçin (veya manuel bağlantı / QR ile bağlanın), 4 haneli PIN'i girip bağlanın.
 
 ### 🤖 Android (İstemci)
-1. [**MacRemote-Android.apk dosyasını indirin (son sürüm)**](https://github.com/ibrahimtemur/mac-remote-app/releases/latest/download/MacRemote-Android.apk) veya Google Play Store üzerinden uygulamayı yükleyin.
+1. [Sürümler](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasından `MacRemote-Android-v1.5.0.apk` dosyasını veya Google Play Store üzerinden uygulamayı yükleyin.
 2. **Mac Remote** uygulamasını açın, Mac'inizi seçin (veya QR kodu tarayın), PIN'i girip bağlanın.
-
-> Tüm sürümleri görmek için [Sürümler (Releases)](https://github.com/ibrahimtemur/mac-remote-app/releases) sayfasını ziyaret edin.
 
 ---
 
