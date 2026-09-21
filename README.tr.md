@@ -5,9 +5,8 @@
 ### iOS (iPhone & iPad) ve Android Cihazlardan macOS İçin Ultra Düşük Gecikmeli Kablosuz Trackpad, Klavye ve Canlı Ekran Yansıtıcı
 
 <p align="center">
-  <a href="README.md"><img src="https://flagcdn.com/w40/gb.png" width="20" alt="English"/>&nbsp;<b>English</b></a>
-  &nbsp;•&nbsp;
-  <a href="README.tr.md"><img src="https://flagcdn.com/w40/tr.png" width="20" alt="Türkçe"/>&nbsp;<b>Türkçe</b></a>
+  <a href="README.md"><b>🇬🇧 English</b></a> •
+  <a href="README.tr.md"><b>🇹🇷 Türkçe</b></a>
 </p>
 
 [![GitHub Sürümü](https://img.shields.io/github/v/release/ibrahimtemur/mac-remote-app?style=for-the-badge&color=blue)](https://github.com/ibrahimtemur/mac-remote-app/releases)
@@ -28,7 +27,7 @@
 ## 📸 Ekran Görüntüleri
 
 <div align="center">
-  <h3><img src="https://flagcdn.com/w40/gb.png" width="24" alt="English"/>&nbsp;İngilizce Arayüz</h3>
+  <h3>🇬🇧 İngilizce Arayüz</h3>
   <table>
     <tr>
       <td align="center"><b>1. Mobil Keşif & Bağlantı</b></td>
@@ -42,7 +41,7 @@
     </tr>
   </table>
 
-  <h3><img src="https://flagcdn.com/w40/tr.png" width="24" alt="Türkçe"/>&nbsp;Türkçe Arayüz</h3>
+  <h3>🇹🇷 Türkçe Arayüz</h3>
   <table>
     <tr>
       <td align="center"><b>1. Cihaz Keşfi & Bağlantı</b></td>
@@ -76,7 +75,7 @@
   - Video ve müzik oynatıcılar için 10 saniye ileri ve geri sarma.
   - Yerel sistem ses butonları (Sesi Aç, Sesi Kıs, Sessize Al).
 - ⌨️ **Genişletilebilir Sanal Klavye:**
-  - Hızlı yardımcı butonlara sahip tam klavye: `Boşluk`, `Silme`, `Enter` ve `Esc`.
+  - Hızlı yardımcı butonlara sahip tam klavye: `␣ Boşluk`, `⌫ Silme`, `⏎ Enter` ve `Esc`.
   - Harf tekrarı ve takılma yapmayan tek vuruşlu metin iletimi.
 - 🌐 **Sıfır Yapılandırma ile Ağ ve Uzaktan Erişim:**
   - **Yerel Ağ (LAN):** iOS (`NWBrowser`) ve Android (`NsdManager`) üzerinde Bonjour / mDNS (`_macremote._tcp.local.`) ile Mac'i otomatik bulma.
@@ -124,7 +123,7 @@
 ## 📥 Kurulum
 
 ### 🍏 macOS (Sunucu)
-1. [Sürümler (Releases)](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasına gidin ve `MacRemote-v1.4.0.dmg` dosyasını indirin.
+1. [Sürümler (Releases)](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasına gidin ve `MacRemote-v1.5.0.dmg` dosyasını indirin.
 2. DMG dosyasını açın ve **Mac Remote.app** uygulamasını `/Applications` (Uygulamalar) klasörünüze sürükleyin.
 3. **Erişilebilirlik ve Ekran Kaydı İzinleri:**
    - **Sistem Ayarları** > **Gizlilik ve Güvenlik** > **Erişilebilirlik** bölümünden Mac Remote'a izin verin.
@@ -137,7 +136,7 @@
 3. Otomatik bulunan Mac'inizi seçin (veya manuel bağlantı / QR ile bağlanın), 4 haneli PIN'i girip bağlanın.
 
 ### 🤖 Android (İstemci)
-1. [Sürümler](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasından `MacRemote-Android-v1.4.0.apk` dosyasını veya Google Play Store üzerinden uygulamayı yükleyin.
+1. [Sürümler](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasından `MacRemote-Android-v1.5.0.apk` dosyasını veya Google Play Store üzerinden uygulamayı yükleyin.
 2. **Mac Remote** uygulamasını açın, Mac'inizi seçin (veya QR kodu tarayın), PIN'i girip bağlanın.
 
 ---
