@@ -9,16 +9,16 @@
   <a href="README.tr.md"><img src="https://flagcdn.com/w20/tr.png" width="20" alt="TR"> <b>Türkçe</b></a>
 </p>
 
-[![GitHub Sürümü](https://img.shields.io/github/v/release/ibrahimtemur/mac-remote-app?style=for-the-badge&color=blue)](https://github.com/ibrahimtemur/mac-remote-app/releases)
+[![Sürüm](https://img.shields.io/badge/Sürüm-v1.5.0-blue?style=for-the-badge)](https://github.com/ibrahimtemur/mac-remote/releases/latest)
 [![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20iOS%20%7C%20Android-black?style=for-the-badge&logo=apple)](https://github.com/ibrahimtemur/mac-remote-app)
-[![Wiki Dokümantasyonu](https://img.shields.io/badge/Dokümantasyon-Wiki-orange?style=for-the-badge)](https://github.com/ibrahimtemur/mac-remote-app/wiki)
+[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20iOS%20%7C%20Android-black?style=for-the-badge&logo=apple)](https://github.com/ibrahimtemur/mac-remote)
+[![Wiki Dokümantasyonu](https://img.shields.io/badge/Dokümantasyon-Wiki-orange?style=for-the-badge)](https://github.com/ibrahimtemur/mac-remote/wiki)
 
 <br/>
 
 **iPhone, iPad veya Android** cihazınızı; hem Yerel Wi-Fi (LAN) hem de İnternet (WAN) üzerinden macOS için yüksek hassasiyetli, donanım düzeyinde bir kablosuz trackpad'e, medya kumandasına, klavyeye ve kristal netliğinde canlı ekran yansıtıcısına dönüştürün.
 
-[Özellikler](#-öne-çıkan-özellikler) • [Nasıl Çalışır](#-mimari--nasıl-çalışır) • [Kurulum](#-kurulum) • [Güvenlik](#-güvenlik) • [Wiki](https://github.com/ibrahimtemur/mac-remote-app/wiki)
+[Özellikler](#-öne-çıkan-özellikler) • [Nasıl Çalışır](#-mimari--nasıl-çalışır) • [Kurulum](#-kurulum) • [Güvenlik](#-güvenlik) • [Wiki](https://github.com/ibrahimtemur/mac-remote/wiki)
 
 </div>
 
@@ -35,8 +35,8 @@
       <td align="center"><b>3. macOS Sunucu Kontrol Paneli</b></td>
     </tr>
     <tr>
-      <td align="center" valign="top"><img src="screenshots/android_connection_en.png" alt="Bağlantı Ekranı (EN)" width="230"/></td>
-      <td align="center" valign="top"><img src="screenshots/android_trackpad_en.png" alt="Trackpad & Canlı Ekran (EN)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/en1.png" alt="Bağlantı Ekranı (EN)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/en2.png" alt="Trackpad & Canlı Ekran (EN)" width="230"/></td>
       <td align="center" valign="top"><img src="screenshots/mac_server_en.png" alt="macOS Sunucu GUI (EN)" width="280"/></td>
     </tr>
   </table>
@@ -49,8 +49,8 @@
       <td align="center"><b>3. macOS Sunucu Kontrol Paneli</b></td>
     </tr>
     <tr>
-      <td align="center" valign="top"><img src="screenshots/android_connection_tr.png" alt="Bağlantı Ekranı (TR)" width="230"/></td>
-      <td align="center" valign="top"><img src="screenshots/android_trackpad_tr.png" alt="Trackpad & Canlı Ekran (TR)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/tr1.png" alt="Bağlantı Ekranı (TR)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/tr2.png" alt="Trackpad & Canlı Ekran (TR)" width="230"/></td>
       <td align="center" valign="top"><img src="screenshots/mac_server_tr.png" alt="macOS Sunucu GUI (TR)" width="280"/></td>
     </tr>
   </table>
@@ -123,7 +123,7 @@
 ## 📥 Kurulum
 
 ### 🍏 macOS (Sunucu)
-1. [Sürümler (Releases)](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasına gidin ve `MacRemote-v1.5.0.dmg` dosyasını indirin.
+1. [Sürümler (Releases)](https://github.com/ibrahimtemur/mac-remote/releases/latest) sayfasına gidin ve `MacRemote-v1.5.0.dmg` dosyasını indirin.
 2. DMG dosyasını açın ve **Mac Remote.app** uygulamasını `/Applications` (Uygulamalar) klasörünüze sürükleyin.
 3. **Erişilebilirlik ve Ekran Kaydı İzinleri:**
    - **Sistem Ayarları** > **Gizlilik ve Güvenlik** > **Erişilebilirlik** bölümünden Mac Remote'a izin verin.
@@ -136,7 +136,7 @@
 3. Otomatik bulunan Mac'inizi seçin (veya manuel bağlantı / QR ile bağlanın), 4 haneli PIN'i girip bağlanın.
 
 ### 🤖 Android (İstemci)
-1. [Sürümler](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) sayfasından `MacRemote-Android-v1.5.0.apk` dosyasını veya Google Play Store üzerinden uygulamayı yükleyin.
+1. [Sürümler](https://github.com/ibrahimtemur/mac-remote/releases/latest) sayfasından `MacRemote-Android-v1.5.0.apk` dosyasını veya Google Play Store üzerinden uygulamayı yükleyin.
 2. **Mac Remote** uygulamasını açın, Mac'inizi seçin (veya QR kodu tarayın), PIN'i girip bağlanın.
 
 ---
@@ -159,7 +159,7 @@ Mac Remote sistem düzeyinde uzaktan erişim sağladığı için:
 - [x] Bağımsız ters tünel ve QR kod ile WAN üzerinden uzaktan erişim
 - [x] Yerel iOS (iPhone & iPad) SwiftUI istemcisi
 - [x] Apple Developer ID imzalı & onaylı (Notarized) macOS DMG yükleyicisi
-- [ ] Doğrudan WebRTC P2P bağlantı modu (bkz. [ROADMAP.md](ROADMAP.md))
+- [ ] Doğrudan WebRTC P2P bağlantı modu
 - [ ] Çevrimdışı ortamlar için Bluetooth LE yedek bağlantısı
 - [ ] macOS üzerinde çoklu monitör seçici
 - [ ] Mobilde biyometrik (Face ID / Parmak İzi) hızlı kilit açma

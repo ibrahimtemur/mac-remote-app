@@ -9,16 +9,16 @@
   <a href="README.tr.md"><img src="https://flagcdn.com/w20/tr.png" width="20" alt="TR"> <b>Türkçe</b></a>
 </p>
 
-[![GitHub Release](https://img.shields.io/github/v/release/ibrahimtemur/mac-remote-app?style=for-the-badge&color=blue)](https://github.com/ibrahimtemur/mac-remote-app/releases)
+[![Release](https://img.shields.io/badge/Release-v1.5.0-blue?style=for-the-badge)](https://github.com/ibrahimtemur/mac-remote/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20iOS%20%7C%20Android-black?style=for-the-badge&logo=apple)](https://github.com/ibrahimtemur/mac-remote-app)
-[![Documentation Wiki](https://img.shields.io/badge/Documentation-Wiki-orange?style=for-the-badge)](https://github.com/ibrahimtemur/mac-remote-app/wiki)
+[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20iOS%20%7C%20Android-black?style=for-the-badge&logo=apple)](https://github.com/ibrahimtemur/mac-remote)
+[![Documentation Wiki](https://img.shields.io/badge/Documentation-Wiki-orange?style=for-the-badge)](https://github.com/ibrahimtemur/mac-remote/wiki)
 
 <br/>
 
 Turn your **iPhone, iPad or Android** device into a high-precision, hardware-level wireless trackpad, media remote, keyboard and crystal-clear live screen mirror for macOS, over both local Wi-Fi (LAN) and the Internet (WAN).
 
-[Features](#-key-features) • [How It Works](#-architecture--how-it-works) • [Installation](#-installation) • [Security](#-security) • [Wiki](https://github.com/ibrahimtemur/mac-remote-app/wiki)
+[Features](#-key-features) • [How It Works](#-architecture--how-it-works) • [Installation](#-installation) • [Security](#-security) • [Wiki](https://github.com/ibrahimtemur/mac-remote/wiki)
 
 </div>
 
@@ -35,8 +35,8 @@ Turn your **iPhone, iPad or Android** device into a high-precision, hardware-lev
       <td align="center"><b>3. macOS Server Control Panel</b></td>
     </tr>
     <tr>
-      <td align="center" valign="top"><img src="screenshots/android_connection_en.png" alt="Connection Screen (EN)" width="230"/></td>
-      <td align="center" valign="top"><img src="screenshots/android_trackpad_en.png" alt="Trackpad & Live Screen (EN)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/en1.png" alt="Connection Screen (EN)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/en2.png" alt="Trackpad & Live Screen (EN)" width="230"/></td>
       <td align="center" valign="top"><img src="screenshots/mac_server_en.png" alt="macOS Server GUI (EN)" width="280"/></td>
     </tr>
   </table>
@@ -49,8 +49,8 @@ Turn your **iPhone, iPad or Android** device into a high-precision, hardware-lev
       <td align="center"><b>3. macOS Server Control Panel</b></td>
     </tr>
     <tr>
-      <td align="center" valign="top"><img src="screenshots/android_connection_tr.png" alt="Connection Screen (TR)" width="230"/></td>
-      <td align="center" valign="top"><img src="screenshots/android_trackpad_tr.png" alt="Trackpad & Live Screen (TR)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/tr1.png" alt="Connection Screen (TR)" width="230"/></td>
+      <td align="center" valign="top"><img src="screenshots/tr2.png" alt="Trackpad & Live Screen (TR)" width="230"/></td>
       <td align="center" valign="top"><img src="screenshots/mac_server_tr.png" alt="macOS Server GUI (TR)" width="280"/></td>
     </tr>
   </table>
@@ -123,7 +123,7 @@ Turn your **iPhone, iPad or Android** device into a high-precision, hardware-lev
 ## 📥 Installation
 
 ### 🍏 macOS (Server)
-1. Go to the [Releases](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) page and download `MacRemote-v1.5.0.dmg`.
+1. Go to the [Releases](https://github.com/ibrahimtemur/mac-remote/releases/latest) page and download `MacRemote-v1.5.0.dmg`.
 2. Open the DMG file and drag **Mac Remote.app** into your `/Applications` folder.
 3. **Accessibility & Screen Recording Permissions:**
    - Go to **System Settings** > **Privacy & Security** > **Accessibility** and allow Mac Remote.
@@ -136,7 +136,7 @@ Turn your **iPhone, iPad or Android** device into a high-precision, hardware-lev
 3. Select your automatically discovered Mac (or connect manually / via QR), enter the 4-digit PIN and connect.
 
 ### 🤖 Android (Client)
-1. Download `MacRemote-Android-v1.5.0.apk` from the [Releases](https://github.com/ibrahimtemur/mac-remote-app/releases/latest) page, or install the app from the Google Play Store.
+1. Download `MacRemote-Android-v1.5.0.apk` from the [Releases](https://github.com/ibrahimtemur/mac-remote/releases/latest) page, or install the app from the Google Play Store.
 2. Open the **Mac Remote** app, select your Mac (or scan the QR code), enter the PIN and connect.
 
 ---
@@ -159,7 +159,7 @@ Because Mac Remote provides system-level remote access:
 - [x] Remote access over WAN with an independent reverse tunnel and QR code
 - [x] Native iOS (iPhone & iPad) SwiftUI client
 - [x] Apple Developer ID signed & Notarized macOS DMG installer
-- [ ] Direct WebRTC P2P connection mode (see [ROADMAP.md](ROADMAP.md))
+- [ ] Direct WebRTC P2P connection mode
 - [ ] Bluetooth LE fallback connection for offline environments
 - [ ] Multi-monitor selector on macOS
 - [ ] Biometric (Face ID / Fingerprint) quick unlock on mobile
